@@ -30,7 +30,7 @@ variable "VERSION" {
 target "image" {
   context = "./src/${IMAGE_NAME}/"
   dockerfile = "Dockerfile"
-  target = "runner"
+  // target = "runner"
   tags = [
     // "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-${VERSION}",
     // "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-latest",
