@@ -25,7 +25,8 @@ RUN \
 
 # Install an Algorand node
 RUN \
-    curl -o - https://releases.algorand.com/key.pub | sudo tee /etc/apt/trusted.gpg.d/algorand.asc && \
+    curl -o - https://releases.algorand.com/key.pub | tee /etc/apt/trusted.gpg.d/algorand.asc && \
+    # curl -o - https://releases.algorand.com/key.pub | sudo tee /etc/apt/trusted.gpg.d/algorand.asc && \
     add-apt-repository "deb [arch=amd64] https://releases.algorand.com/deb/ stable main"  && \
     apt-get update  && \
     # To get both algorand and the devtools:
