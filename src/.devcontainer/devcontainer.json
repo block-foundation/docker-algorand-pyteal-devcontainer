@@ -1,0 +1,10 @@
+{
+    "name": "Algorand PyTeal DevContainer",
+    "dockerFile": "Dockerfile",
+    "forwardPorts": [4001], // if you want to forward any ports from the container
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "echo 'Welcome to your Algorand PyTeal DevContainer'",
+    "extensions": ["ms-python.python"]
+}
