@@ -32,10 +32,14 @@ target "image" {
   dockerfile = "Dockerfile"
   target = "runner"
   tags = [
-    "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-${VERSION}",
-    "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-latest",
-    "${REPOSITORY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-${VERSION}",
-    "${REPOSITORY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-latest",
+    // "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-${VERSION}",
+    // "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-latest",
+    // "${REPOSITORY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-${VERSION}",
+    // "${REPOSITORY_ENDPOINT}/${IMAGE_NAME}:${BRANCH}-latest",
+    "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:${VERSION}",
+    "${REGISTRY_ENDPOINT}/${IMAGE_NAME}:latest",
+    "${REPOSITORY_ENDPOINT}/${IMAGE_NAME}:${VERSION}",
+    "${REPOSITORY_ENDPOINT}/${IMAGE_NAME}:latest",
     ]
 }
 
