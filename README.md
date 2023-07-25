@@ -19,7 +19,6 @@
     <img src="https://raw.githubusercontent.com/block-foundation/brand/master/src/image/repository_cover/block_foundation-containers.jpg"width="100%" height="100%" alt="Block Foundation Containers">
 </p>
 
-
 ## Introduction
 
 Welcome to the Algorand PyTeal Dockerized Development Environment project! This repository has been created with the primary goal of simplifying the process of setting up, developing, and testing Algorand Smart Contracts (ASC1s) in PyTeal.
@@ -32,7 +31,13 @@ This Dockerized environment can also be easily shared, ensuring that all team me
 
 Whether you are a seasoned Algorand developer or a beginner who is just starting to explore the world of blockchain and smart contracts, this project is designed to get you up and running quickly, and to make your development experience as smooth and efficient as possible.
 
+## Quick Start
 
+> To just pull the latest version of the container:
+
+``` sh
+docker pull blockfoundation/algorand-pyteal-devcontainer
+```
 
 ## Resources
 
