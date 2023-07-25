@@ -135,7 +135,7 @@ jobs:
           VERSION: ${{ env.VERSION }}
         with:
           files: |
-            ./bin/docker/docker-bake.hcl
+            ./bin/docker-bake.hcl
           # ${{ steps.meta.outputs.bake-file }}
           targets: image-all
           # pull: true
