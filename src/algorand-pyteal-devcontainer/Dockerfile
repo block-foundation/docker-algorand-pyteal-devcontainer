@@ -24,29 +24,29 @@ RUN \
         python3-wheel
 
 # Install an Algorand node
-RUN \
-    curl -o - https://releases.algorand.com/key.pub | tee /etc/apt/trusted.gpg.d/algorand.asc && \
-    # curl -o - https://releases.algorand.com/key.pub | sudo tee /etc/apt/trusted.gpg.d/algorand.asc && \
-    add-apt-repository "deb [arch=amd64] https://releases.algorand.com/deb/ stable main"  && \
-    apt-get update  && \
-    # To get both algorand and the devtools:
-    apt-get install -y algorand-devtools
-    # Or, to only install algorand:
-    # apt-get install -y algorand
+# RUN \
+#     curl -o - https://releases.algorand.com/key.pub | tee /etc/apt/trusted.gpg.d/algorand.asc && \
+#     # curl -o - https://releases.algorand.com/key.pub | sudo tee /etc/apt/trusted.gpg.d/algorand.asc && \
+#     add-apt-repository "deb [arch=amd64] https://releases.algorand.com/deb/ stable main"  && \
+#     apt-get update  && \
+#     # To get both algorand and the devtools:
+#     apt-get install -y algorand-devtools
+#     # Or, to only install algorand:
+#     # apt-get install -y algorand
 
-# # Install Algorand Node and tools
-# RUN curl -O https://releases.algorand.com/install/install_master_linux-amd64.tar.gz && \
-#     tar xf install_master_linux-amd64.tar.gz && \
-#     ./install_master_linux-amd64_2.5.4/install -i -y -d ~/node/data
+# # # Install Algorand Node and tools
+# # RUN curl -O https://releases.algorand.com/install/install_master_linux-amd64.tar.gz && \
+# #     tar xf install_master_linux-amd64.tar.gz && \
+# #     ./install_master_linux-amd64_2.5.4/install -i -y -d ~/node/data
 
-# # Installing Algorand dev tools
-# RUN apt-get update && apt-get install -y curl git
-# RUN curl https://raw.githubusercontent.com/algorand/go-algorand-doc/master/downloads/installers/update_dev.sh -O && \
-#     chmod 544 update_dev.sh && \
-#     ./update_dev.sh -n -c stable -p ~/node -d ~/node/data -r https://github.com/algorand/go-algorand
+# # # Installing Algorand dev tools
+# # RUN apt-get update && apt-get install -y curl git
+# # RUN curl https://raw.githubusercontent.com/algorand/go-algorand-doc/master/downloads/installers/update_dev.sh -O && \
+# #     chmod 544 update_dev.sh && \
+# #     ./update_dev.sh -n -c stable -p ~/node -d ~/node/data -r https://github.com/algorand/go-algorand
 
 # Set up PATH for Algorand binaries
-ENV PATH="${PATH}:/root/node/data"
+# ENV PATH="${PATH}:/root/node/data"
 
 # Cleanup
 RUN \
